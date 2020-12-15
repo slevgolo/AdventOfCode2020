@@ -43,13 +43,13 @@ with open('input_day_4.txt', 'r') as f:
 
 passports_dict = fileToListOfDicts(txt)
 
-counter_challenge_1 = 0
-counter_challenge_2 = 0
+solution1 = 0
+solution2 = 0
 for passport in passports_dict:
     if not validKeys(passport):
         continue
     else:
-        counter_challenge_1 += 1
+        solution1 += 1
 
     if 1920 <= int(passport['byr']) <= 2002:
         if 2010 <= int(passport['iyr']) <= 2020:
@@ -62,7 +62,7 @@ for passport in passports_dict:
                             if unit in ['cm', 'in']:
                                 number = int(passport['hgt'][:-2])
                                 if validNumber(unit, number):
-                                    counter_challenge_2 += 1
+                                    solution2 += 1
 
-print('A1: ', counter_challenge_1)
-print('A2: ', counter_challenge_2)
+print('A1: ', solution1)
+print('A2: ', solution2)
