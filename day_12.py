@@ -37,7 +37,6 @@ for instruction in instructions:
         position = move(command, value, position)
 
 solution1 = manhattenDistance(position)
-print('A1: ', solution1)
 
 waypoint = [10, 1]
 position = start_position
@@ -67,4 +66,6 @@ for instruction in instructions:
             waypoint = [-waypoint[1], waypoint[0]]
 
 solution2 = manhattenDistance(position)
+
+print('A1: ', solution1)
 print('A2: ', solution2)
